@@ -3,20 +3,25 @@
   box-shadow: 0 2px 12px 0;
 }
 
+body {
+  text-align: center;
+}
+
+h1 {
+  padding-top: 50px;
+  font-size: 50px;
+}
+
 .main {
   background-color: rgb(185, 185, 185);
+  height: 72vh;
   margin-top: 50px;
-  padding-bottom: 60px;
 }
 .main .btn {
   margin: 30px;
   margin-top: 80px;
   width: 100px;
   border-radius: 50px;
-}
-.main h1 {
-  padding-top: 50px;
-  font-size: 50px;
 }
 
 .cards {
@@ -35,7 +40,31 @@
   justify-content: center;
   align-items: center;
 }
+.cards .card .answer {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+}
 
 #footerPara {
-  margin-top: 150px;
+  margin-top: 80px;
+}
+
+#aboutPara {
+  width: 600px;
+  margin-top: 40px;
+}
+
+.mainText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  height: 80vh;
 }/*# sourceMappingURL=styles.css.map */

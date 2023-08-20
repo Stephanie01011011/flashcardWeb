@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/styles.css'
-
+import { Link } from "react-router-dom";
 function Nav() {
   return (
     <>
@@ -18,13 +18,11 @@ function Nav() {
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav ">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <Link to="/" class="nav-link active" aria-current="page">Home</Link>
         </li>
+        
         <li class="nav-item">
-          <a class="nav-link" href="#">German</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <Link to="/about" class="nav-link active" aria-current="page">About</Link>
         </li>
         
       </ul>

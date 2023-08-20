@@ -3,21 +3,13 @@ import Nav from './Nav';
 import Footer from './Footer';
 import '../styles/styles.css';
 
+import german from '../translations';
+
 //rfce
 function Home() {
-  let german = {
-    "Guten Tag": "Hello", 
-    "Das ist gut.": "That is good.", 
-    "Das Auto": "The car", 
-    "Shwartz": "Black", 
-    "Wir Essen": "We are eating",
-    "Sie liest": "She is reading",
-    "Er mann koch": "The man is cooking",
-    "Was ist das": "What is that",
-    "Der Apfel ist rot": "The apple is red",
-    "Die kinder schreiben": "The kids are writing"
-  }
-  let germanWords = Object.keys(german);
+  let data = german;
+  
+  let germanWords = Object.keys(data);
   //To get the german word to display you would select germanWords[4]
 
   //count keeps track of which word to display
@@ -27,7 +19,7 @@ function Home() {
   const [card3, setCard3] = useState("");
   const [card4, setCard4] = useState("");
 
-  let englishWords = Object.values(german);
+  let englishWords = Object.values(data);
 
   let setCards = () => {
    
@@ -58,7 +50,28 @@ let shuffled = cards
   setCard4(cards[3]);
   
  }, [count])
-  
+
+ let yes = '<i class="fa-solid fa-check fa-md" style="color: #0de331;"></i>';
+ let no = '<i class="fa-regular fa-circle-xmark" style="color: #e00000;"></i>';
+
+ let check = (card, num) => {
+  if(englishWords[count] === card){
+    if(document.getElementById(num).innerHTML === ""){
+    document.getElementById(num).innerHTML += yes;
+  }
+  } else {
+    if(document.getElementById(num).innerHTML === ""){
+    document.getElementById(num).innerHTML += no;
+    }
+  }
+}
+
+let clearCards = () => {
+  document.getElementById('one').innerHTML = "";
+  document.getElementById('two').innerHTML = "";
+  document.getElementById('three').innerHTML = "";
+  document.getElementById('four').innerHTML = "";
+}
 
 
 
@@ -66,29 +79,37 @@ let shuffled = cards
   return (
     <>
       <Nav />
+      <div className="germanWord">
+      <h1>{germanWords[count]}</h1>
+      </div>
       <div className="main">
-        <h1>{germanWords[count]}</h1>
+       
 
         <div className="cards">
-        <div className="card" style={{"width": "20%"}}>
-        <div className="card-body">
+       <div className="card" style={{"width": "20%"}} id="card1" onClick={() => check(card1, 'one')}>
+       <div className="card-body">
+       <div className="answer" id='one'></div>
     <h3 className="card-title">{card1}</h3>
     </div>
   </div>
-<div className="card" style={{"width": "20%"}}>
+<div className="card" style={{"width": "20%"}} id="card2" onClick={() => check(card2, 'two')}>
         <div className="card-body">
+          <div className="answer" id='two'></div>
+          
     <h3 className="card-title">{card2}</h3>
     </div>
   </div>
 
-  <div class="card" style={{"width": "20%"}}>
+  <div class="card" style={{"width": "20%"}} id="card3" onClick={() => check(card3, 'three')}>
         <div class="card-body">
+        <div className="answer" id='three'></div>
     <h3 class="card-title">{card3}</h3>
     </div>
   </div>
 
-  <div class="card" style={{"width": "20%"}}>
+  <div class="card" style={{"width": "20%"}} id="card4" onClick={() => check(card4, 'four')}>
         <div class="card-body">
+        <div className="answer" id='four'></div>
     <h3 class="card-title">{card4}</h3>
     </div>
   </div>
@@ -96,7 +117,8 @@ let shuffled = cards
 </div>
 <div className="btns">
 <button type="button" class="btn btn-light" onClick={() => {
-  setCount(count - 1)
+  setCount(count - 1);
+  clearCards();
   if(count === 0){
     setCount(germanWords.length - 1);
   }
@@ -105,6 +127,7 @@ let shuffled = cards
 
 <button type="button" class="btn btn-light" onClick={() => {
   setCount(count + 1)
+  clearCards();
   if(count > germanWords.length - 2){
     setCount(0);
   }

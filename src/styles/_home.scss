@@ -1,15 +1,21 @@
 $primaryColor: rgb(185, 185, 185);
 $cardColor: radial-gradient(#1e0101, #840b3a);
+body{
+    text-align: center;
+}
+h1{
+    padding-top: 50px;
+    font-size: 50px;
+   
+}
 
 .main{
     background-color: $primaryColor;
     
-    
+    height: 72vh;
     margin-top: 50px;
-    padding-bottom: 60px;
-    .btns{
-       
-    }
+    
+   
     
     .btn{
         margin: 30px;
@@ -18,11 +24,7 @@ $cardColor: radial-gradient(#1e0101, #840b3a);
         width: 100px;
         border-radius: 50px;
     }
-    h1{
-        padding-top: 50px;
-        font-size: 50px;
-       
-    }
+    
     
   
 }
@@ -41,8 +43,19 @@ $cardColor: radial-gradient(#1e0101, #840b3a);
             justify-content: center;
             align-items: center;
         }
+        .answer{
+            height: 30px;
+            width: 30px;
+            
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 5px;
+            
+           }
         
     }
+  
  
 }
 
