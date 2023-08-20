@@ -1,3 +1,41 @@
 .navbar {
   height: 120px;
+  box-shadow: 0 2px 12px 0;
+}
+
+.main {
+  background-color: rgb(185, 185, 185);
+  margin-top: 50px;
+  padding-bottom: 60px;
+}
+.main .btn {
+  margin: 30px;
+  margin-top: 80px;
+  width: 100px;
+  border-radius: 50px;
+}
+.main h1 {
+  padding-top: 50px;
+  font-size: 50px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+.cards .card {
+  height: 150px;
+  margin-top: 50px;
+  background: radial-gradient(#1e0101, #840b3a);
+  box-shadow: 2px 0 5px 0;
+}
+.cards .card .card-body {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footerPara {
+  margin-top: 150px;
 }/*# sourceMappingURL=styles.css.map */
