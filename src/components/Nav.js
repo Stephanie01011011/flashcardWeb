@@ -10,7 +10,7 @@ function Nav() {
   <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
       <ul class="navbar-nav ">
         <li class="nav-item">
-          <a class="nav-link active fs-2" aria-current="page" href="#">Learn A New Language: German</a>
+          <a class="nav-link active fs-2" aria-current="page" href='/'>Learn A New Language: German</a>
         </li>
       </ul>
     </div>

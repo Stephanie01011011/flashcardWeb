@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import Nav from './Nav';
 import Footer from './Footer';
 import '../styles/styles.css';
@@ -35,19 +35,28 @@ let shuffled = cards
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value)
 
-    
+  
+  
    
     
   return shuffled;
    
   }
+ 
+
+
+ let cards = setCards();
+ 
+useEffect(() => {
+  console.log('hi')
+  setCards();
   
-  let cards = setCards();
- useEffect(() => {
   setCard1(cards[0]);
   setCard2(cards[1]);
   setCard3(cards[2]);
   setCard4(cards[3]);
+  
+  
   
  }, [count])
 
