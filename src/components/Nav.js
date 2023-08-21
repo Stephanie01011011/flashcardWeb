@@ -18,11 +18,11 @@ function Nav() {
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav ">
         <li class="nav-item">
-          <Link to="/" class="nav-link active" aria-current="page">Home</Link>
+          <Link to="/flashcardweb" class="nav-link active" aria-current="page">Home</Link>
         </li>
         
         <li class="nav-item">
-          <Link to="/about" class="nav-link active" aria-current="page">About</Link>
+          <Link to="/flashcardweb/about" class="nav-link active" aria-current="page">About</Link>
         </li>
         
       </ul>

@@ -13,8 +13,8 @@ function App() {
   return (
    <Router> 
     <Routes>
-      <Route exact path="/" Component={Home} />
-      <Route exact path="/about" Component={About} />
+      <Route exact path="/flashcardweb" Component={Home} />
+      <Route exact path="/flashcardweb/about" Component={About} />
     </Routes>
    </Router>
   );
