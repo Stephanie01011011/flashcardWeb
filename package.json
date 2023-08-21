@@ -13,7 +13,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://Stephanie01011011.github.io/flashcardweb",
+  "homepage": "https://stephanie01011011.github.io/flashcardweb",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build", 
