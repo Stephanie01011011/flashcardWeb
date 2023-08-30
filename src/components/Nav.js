@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-md bg-body-tertiary">
   <div class="container-fluid">
     
   <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
@@ -27,6 +27,21 @@ function Nav() {
         
       </ul>
     </div>
+  </div>
+
+  <div className="mobileNav">
+    <h3>Learn a new language: German</h3>
+    <ul className="navLinks">
+        <li class="nav-item">
+          <Link to="/flashcardweb" class="nav-link active" aria-current="page">Home</Link>
+        </li>
+        
+        <li class="nav-item">
+          <Link to="/flashcardweb/about" class="nav-link active" aria-current="page">About</Link>
+        </li>
+        
+      </ul>
+
   </div>
 </nav>
 

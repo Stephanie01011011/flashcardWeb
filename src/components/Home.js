@@ -48,7 +48,7 @@ let shuffled = cards
  let cards = setCards();
  
 useEffect(() => {
-  console.log('hi')
+  
   setCards();
   
   setCard1(cards[0]);
